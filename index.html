@@ -4,6 +4,28 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>OF-7 · Fedortsov · Flight Recorder</title>
+
+<!-- ─── SEO ─────────────────────────── -->
+<meta name="description" content="Oleh Fedortsov — QA Engineer with 8+ years testing mobile, web and API systems across AdTech, FinTech, Enterprise SaaS, social gaming and AAA games. Regression strategy lead on a global ad platform with ML/AI integrations. Based in Lviv, Ukraine." />
+<link rel="canonical" href="https://fedortsov.dev/" />
+<meta name="theme-color" content="#030914" />
+
+<!-- ─── Open Graph (LinkedIn, Slack, Telegram, iMessage) ─────────────────────────── -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://fedortsov.dev/" />
+<meta property="og:title" content="Oleh Fedortsov — QA Engineer" />
+<meta property="og:description" content="8+ years of hands-on QA across mobile, web and API systems. Regression lead on a global ad platform with ML/AI integrations." />
+<meta property="og:image" content="https://fedortsov.dev/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Oleh Fedortsov — QA Engineer" />
+
+<!-- ─── Twitter / X ─────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Oleh Fedortsov — QA Engineer" />
+<meta name="twitter:description" content="8+ years of hands-on QA across mobile, web and API systems." />
+<meta name="twitter:image" content="https://fedortsov.dev/og-cover.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -1049,22 +1071,22 @@
     <div class="instruments">
       <div class="gauge">
         <div class="gauge-lbl">HOURS LOGGED</div>
-        <div class="gauge-val" data-target="8" data-suffix="+">0</div>
+        <div class="gauge-val" data-target="8" data-suffix="+">8+</div>
         <div class="gauge-unit">YEARS / IN-AIR</div>
       </div>
       <div class="gauge">
         <div class="gauge-lbl">PLATFORMS</div>
-        <div class="gauge-val" data-target="8" data-pad="2">00</div>
+        <div class="gauge-val" data-target="8" data-pad="2">08</div>
         <div class="gauge-unit">MOBILE · DESKTOP · CONSOLE</div>
       </div>
       <div class="gauge">
         <div class="gauge-lbl">CREW LED</div>
-        <div class="gauge-val" data-target="6">0</div>
+        <div class="gauge-val" data-target="6">6</div>
         <div class="gauge-unit">QA ENGINEERS</div>
       </div>
       <div class="gauge">
         <div class="gauge-lbl">DOMAINS</div>
-        <div class="gauge-val" data-target="5" data-pad="2">00</div>
+        <div class="gauge-val" data-target="5" data-pad="2">05</div>
         <div class="gauge-unit">INDUSTRIES SHIPPED</div>
       </div>
     </div>
@@ -1511,6 +1533,10 @@
       el.textContent = formatGaugeValue(target, pad, suffix);
       return;
     }
+
+    // The real value now lives in the HTML (no-JS / crawler fallback). Reset to
+    // the start only here — once we know JS runs and we're about to count up.
+    el.textContent = formatGaugeValue(0, pad, suffix);
 
     const duration = 1200;
     let startTime = null;
